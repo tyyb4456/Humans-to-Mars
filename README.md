@@ -2,7 +2,7 @@
     <img src="https://marsapp.streamlit.app/~/+/media/e509f093cad005e2916adb243432aa43f9c144835559d3ffdc16b6cf.gif" 
          width="100%" 
          alt="Mars Animation Banner"/>
-</div>
+
 
 
 
@@ -13,7 +13,7 @@
 [![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://mars-explorer.streamlit.app)
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 
-<img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" width="300"/>
+<img src="https://cdn.britannica.com/01/81401-050-8EB87030/planets-solar-system-Pluto-montage-images-Sun.jpg" width="300"/>
 
 </div>
 
