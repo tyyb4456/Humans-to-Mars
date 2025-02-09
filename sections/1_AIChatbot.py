@@ -47,7 +47,7 @@ def get_groq_response(messages):
         # Call Groq API
         chat_completion = client.chat.completions.create(
             messages=formatted_messages,
-            model= "deepseek-r1-distill-llama-70b",
+            model= "Llama-3.3-70b",
             temperature=0.7,
             max_tokens=1024,
         )
