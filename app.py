@@ -91,7 +91,7 @@ def load_page(page_name):
                 module.main()
 
 def show_home_page():
-    st.markdown('<h1 class="main-header">Welcome to Mars Explorer</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">Welcome to Humans to Mars! r</h1>', unsafe_allow_html=True)
     
     # Display Mars header image
     st.image("mars.gif", use_container_width=True)
