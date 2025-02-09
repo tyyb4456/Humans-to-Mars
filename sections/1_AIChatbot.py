@@ -131,13 +131,13 @@ def chat_interface():
                 st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
 
-def main():
-    # Set page config
-    st.set_page_config(
-        page_title="Mars Expert Chat",
-        page_icon="🚀",
-        layout="wide"
-    )
+# def main():
+#     # Set page config
+#     st.set_page_config(
+#         page_title="Mars Expert Chat",
+#         page_icon="🚀",
+#         layout="wide"
+#     )
     
     chat_interface()
 
