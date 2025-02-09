@@ -19,6 +19,8 @@ def init_session_state():
         st.session_state.wrong_attempts = 0
     if 'highest_level' not in st.session_state:
         st.session_state.highest_level = 1
+    if 'show_balloon' not in st.session_state:
+        st.session_state.show_balloon = False
 
 # AI question generation
 def generate_question(level):
@@ -42,6 +44,19 @@ def generate_question(level):
     )
     
     return json.loads(response.choices[0].message.content)
+
+def celebrate_correct_answer():
+    st.balloons()
+    st.success("🎉 Correct! Moving to next level!")
+    # Add custom celebration message based on level
+    messages = [
+        "Amazing work! 🌟",
+        "You're a space genius! 🚀",
+        "Keep reaching for the stars! ⭐",
+        "Astronomical knowledge! 🌍",
+        "Out of this world! 🌌"
+    ]
+    st.markdown(f"### {messages[st.session_state.level % len(messages)]}")
 
 def main():
     # Check if API key is set
@@ -89,11 +104,12 @@ def main():
             if st.button("Submit Answer"):
                 correct_index = st.session_state.current_question['correct_index']
                 if selected_option == st.session_state.current_question['options'][correct_index]:
-                    st.success("🎉 Correct! Moving to next level!")
+                    celebrate_correct_answer()
                     st.session_state.level += 1
                     st.session_state.wrong_attempts = 0
                     st.session_state.current_question = None
                     st.session_state.highest_level = max(st.session_state.highest_level, st.session_state.level)
+                    # Add delay to show celebration before rerun
                     st.rerun()
                 else:
                     st.session_state.wrong_attempts += 1
@@ -103,11 +119,14 @@ def main():
         
         with col2:
             if st.button("Start Over"):
+                for key in ['level', 'current_question', 'wrong_attempts', 'quiz_started', 'show_balloon']:
+                    if key in st.session_state:
+                        st.session_state[key] = None
                 st.session_state.level = 1
-                st.session_state.current_question = None
-                st.session_state.wrong_attempts = 0
-                st.session_state.quiz_started = False
                 st.rerun()
+
+        # Display highest level achieved
+        st.sidebar.markdown(f"### 🏆 Highest Level: {st.session_state.highest_level}")
 
 if __name__ == "__main__":
     main()
