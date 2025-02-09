@@ -5,7 +5,6 @@ from datetime import datetime
 import os
 from groq import Groq
 from dotenv import load_dotenv
-#from utils import create_sidebar
 
 load_dotenv()
 
@@ -13,6 +12,33 @@ load_dotenv()
 client = Groq(
     api_key=os.getenv('GROQ_API_KEY')
 )
+
+# Default questions to help users get started
+DEFAULT_QUESTIONS = [
+    "What is the average temperature on Mars?",
+    "Tell me about the Mars rovers currently operating",
+    "How long would it take to travel to Mars?",
+    "What makes Mars' atmosphere different from Earth's?",
+    "What evidence is there for water on Mars?",
+]
+
+# Enhanced system prompt
+SYSTEM_PROMPT = """You are an expert AI assistant specializing in Mars and space exploration, with deep knowledge of:
+- Mars' physical characteristics, geology, and atmosphere
+- Past, present, and planned Mars exploration missions
+- Potential for human colonization and terraforming
+- Scientific discoveries and research about Mars
+- Comparison between Mars and Earth
+- Technical aspects of Mars exploration technology
+
+Provide accurate, well-structured responses that:
+- Use clear, accessible language while maintaining scientific accuracy
+- Include relevant facts and figures when appropriate
+- Address both historical context and current developments
+- Acknowledge areas of scientific uncertainty
+- Stay focused on Mars-related topics
+- Keep responses concise but informative
+"""
 
 def load_chat_history():
     try:
@@ -34,7 +60,7 @@ def get_groq_response(messages):
         formatted_messages = []
         system_message = {
             "role": "system",
-            "content": "You are an expert on Mars and space exploration. Provide accurate, informative responses about Mars, its features, exploration missions, and related topics. Keep responses concise but informative."
+            "content": SYSTEM_PROMPT
         }
         formatted_messages.append(system_message)
         
@@ -47,7 +73,7 @@ def get_groq_response(messages):
         # Call Groq API
         chat_completion = client.chat.completions.create(
             messages=formatted_messages,
-            model= "llama-3.3-70b-versatile",
+            model="llama-3.3-70b-versatile",
             temperature=0.7,
             max_tokens=1024,
         )
@@ -58,8 +84,24 @@ def get_groq_response(messages):
         return "I apologize, but I'm having trouble generating a response right now. Please try again."
 
 def chat_interface():
-    st.title("Mars Expert AI Chatbot")
+    st.title("Mars Expert AI Chatbot 🚀")
     st.write("Ask me anything about Mars! I'm here to help you learn about the Red Planet.")
+    
+    # Add a sidebar with example questions
+    with st.sidebar:
+        st.header("Sample Questions")
+        st.write("Click on any question to try it out:")
+        for question in DEFAULT_QUESTIONS:
+            if st.button(question):
+                st.session_state.messages.append({"role": "user", "content": question})
+                with st.chat_message("user"):
+                    st.markdown(question)
+                
+                with st.chat_message("assistant"):
+                    with st.spinner("Thinking..."):
+                        response = get_groq_response(st.session_state.messages)
+                        st.markdown(response)
+                st.session_state.messages.append({"role": "assistant", "content": response})
     
     # Initialize chat history
     if "messages" not in st.session_state:
@@ -70,6 +112,11 @@ def chat_interface():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
     
+    # Add clear chat button
+    if st.button("Clear Chat"):
+        st.session_state.messages = []
+        st.experimental_rerun()
+    
     # Chat input
     if prompt := st.chat_input("Ask a question about Mars..."):
         # Add user message to chat history
@@ -79,13 +126,19 @@ def chat_interface():
         
         # Generate AI response
         with st.chat_message("assistant"):
-            with st.spinner("Thinking..."):
+            with st.spinner("Thinking about Mars..."):
                 response = get_groq_response(st.session_state.messages)
                 st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 def main():
-    #create_sidebar()
+    # Set page config
+    st.set_page_config(
+        page_title="Mars Expert Chat",
+        page_icon="🚀",
+        layout="wide"
+    )
+    
     chat_interface()
 
 if __name__ == "__main__":
