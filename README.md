@@ -51,7 +51,7 @@ NASA_API_KEY=your_nasa_api_key
 
 # Run the application:
 streamlit run app.py
-
+```
 ## Project Structure
 mars-explorer/
 ├── app.py # Main application file
