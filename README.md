@@ -37,7 +37,7 @@ An interactive web application built with Streamlit that provides comprehensive 
 ## Installation
 
 1. Clone the repository:
-git clone [https://github.com/Humam-hub/Mars.git]/
+git clone (https://github.com/Humam-hub/Mars.git) /
 cd mars-explorer
 
 2. Install required packages:
@@ -99,5 +99,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-LinkedIN - [Muhammad Humam Tahir](https://www.linkedin.com/in/muhammad-humam-tahir-470267178/)/ 
+LinkedIN - [Muhammad Humam Tahir](https://www.linkedin.com/in/muhammad-humam-tahir-470267178/) / 
 Project Link: [https://github.com/Humam-hub/Mars/tree/main](https://github.com/Humam-hub/Mars/tree/main)
