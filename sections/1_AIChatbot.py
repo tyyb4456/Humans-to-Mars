@@ -102,10 +102,10 @@ def chat_interface():
                 with st.chat_message(message["role"]):
                     st.markdown(message["content"])
         
-        # Add clear chat button
-        if st.button("Clear Chat"):
-            st.session_state.messages = []
-            st.experimental_rerun()
+        # # Add clear chat button
+        # if st.button("Clear Chat"):
+        #     st.session_state.messages = []
+        #     st.experimental_rerun()
         
         # Chat input
         if prompt := st.chat_input("Ask a question about Mars..."):
@@ -137,9 +137,6 @@ def chat_interface():
                 st.session_state.messages.append({"role": "assistant", "content": response})
 
 def main():
-    # Set page config
-
-    
     chat_interface()
 
 if __name__ == "__main__":
