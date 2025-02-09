@@ -39,7 +39,7 @@ def load_custom_css():
         .question-box {
             padding: 20px;
             border-radius: 10px;
-            background-color: #f0f8ff;
+            background-color: black;
             margin: 20px 0;
             border: 2px solid #4169e1;
         }
