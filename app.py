@@ -23,7 +23,7 @@ def load_css():
         .main-header {
             font-size: 3rem;
             font-weight: bold;
-            color: #FF4B4B;
+            color: green;
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -91,7 +91,7 @@ def load_page(page_name):
                 module.main()
 
 def show_home_page():
-    st.markdown('<h1 class="main-header">Welcome to Humans to Mars! r</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">Welcome to Humans to Mars! </h1>', unsafe_allow_html=True)
     
     # Display Mars header image
     st.image("mars.gif", use_container_width=True)
