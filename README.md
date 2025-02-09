@@ -53,6 +53,7 @@ NASA_API_KEY=your_nasa_api_key
 streamlit run app.py
 ```
 ## Project Structure
+```
 mars-explorer/
 ├── app.py # Main application file
 ├── requirements.txt # Project dependencies
@@ -62,7 +63,7 @@ mars-explorer/
 │ ├── 3_NASAData.py # NASA API integration
 │ └── game.py # Quiz implementation
 └── utils.py # Utility functions
-
+```
 ## Dependencies
 
 - Streamlit
@@ -99,5 +100,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-LinkedIN - [Muhammad Humam Tahir](https://www.linkedin.com/in/muhammad-humam-tahir-470267178/) / 
+LinkedIN - [Muhammad Humam Tahir](https://www.linkedin.com/in/muhammad-humam-tahir-470267178/) 
+
 Project Link: [https://github.com/Humam-hub/Mars/tree/main](https://github.com/Humam-hub/Mars/tree/main)
