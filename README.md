@@ -37,21 +37,50 @@
 <div align="center">
 <table>
 <tr>
-<td align="center">
-<img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt=""/><br>
-<sub><b>Muhammad Humam</b></sub><br>
-<sub>Project Lead</sub>
-</td>
-<td align="center">
-<img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt=""/><br>
-<sub><b>Sarah Chen</b></sub><br>
-<sub>AI Engineer</sub>
-</td>
-<td align="center">
-<img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt=""/><br>
-<sub><b>David Rodriguez</b></sub><br>
-<sub>Frontend Expert</sub>
-</td>
+    <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt="Muhammad Humam"/><br>
+        <sub><b>Muhammad Humam</b></sub><br>
+        <sub>Project Lead</sub><br>
+        <a href="https://github.com/username1"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/username1"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+    </td>
+    <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt="Sarah Chen"/><br>
+        <sub><b>Sarah Chen</b></sub><br>
+        <sub>AI Engineer</sub><br>
+        <a href="https://github.com/username2"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/username2"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+    </td>
+    <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt="David Rodriguez"/><br>
+        <sub><b>David Rodriguez</b></sub><br>
+        <sub>Frontend Expert</sub><br>
+        <a href="https://github.com/username3"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/username3"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+    </td>
+</tr>
+<tr>
+    <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt="Emma Patel"/><br>
+        <sub><b>Emma Patel</b></sub><br>
+        <sub>Backend Developer</sub><br>
+        <a href="https://github.com/username4"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/username4"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+    </td>
+    <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt="Liam Johnson"/><br>
+        <sub><b>Liam Johnson</b></sub><br>
+        <sub>Data Scientist</sub><br>
+        <a href="https://github.com/username5"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/username5"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+    </td>
+    <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" alt="Sophia Lee"/><br>
+        <sub><b>Sophia Lee</b></sub><br>
+        <sub>DevOps Engineer</sub><br>
+        <a href="https://github.com/username6"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/username6"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+    </td>
 </tr>
 </table>
 </div>
@@ -90,13 +119,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 🌠 Connect With Us
 
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/muhammad-humam-tahir-470267178/)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-blue?style=for-the-badge&logo=twitter)](https://twitter.com)
-[![Website](https://img.shields.io/badge/Website-Visit-green?style=for-the-badge&logo=google-chrome)](https://mars-explorer.streamlit.app)
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
