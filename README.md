@@ -35,21 +35,21 @@ An interactive web application built with Streamlit that provides comprehensive 
 - Progress tracking system
 
 ## Installation
-
-1. Clone the repository:
-git clone (https://github.com/Humam-hub/Mars.git) /
+```
+# Clone the repository:
+git clone (https://github.com/Humam-hub/Mars.git) 
 cd mars-explorer
 
-2. Install required packages:
+# Install required packages:
 pip install -r requirements.txt
 
-3. Set up environment variables:
+# Set up environment variables:
 Create a `.env` file with:
+
 GROQ_API_KEY=your_groq_api_key
 NASA_API_KEY=your_nasa_api_key
 
-4. Run the application:
-bash
+# Run the application:
 streamlit run app.py
 
 ## Project Structure
