@@ -2,6 +2,7 @@
     <img src="https://marsapp.streamlit.app/~/+/media/e509f093cad005e2916adb243432aa43f9c144835559d3ffdc16b6cf.gif" 
          width="100%" 
          alt="Mars Animation Banner"/>
+</div>
 
 
 
