@@ -32,7 +32,7 @@ def init_session_state():
     if 'achievements' not in st.session_state:
         st.session_state.achievements = set()
 
-# Custom CSS for better styling
+# Custom CSS
 def load_custom_css():
     st.markdown("""
         <style>
@@ -52,12 +52,8 @@ def load_custom_css():
             animation: glow 1s ease-in-out infinite alternate;
         }
         @keyframes glow {
-            from {
-                box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700;
-            }
-            to {
-                box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffd700;
-            }
+            from { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700; }
+            to { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffd700; }
         }
         .streak-counter {
             font-size: 24px;
@@ -101,27 +97,30 @@ def check_achievements():
             """, unsafe_allow_html=True)
 
 def generate_question(level):
-    difficulty = "basic" if level <= 3 else "intermediate" if level <= 6 else "advanced"
-    
-    prompt = f"""Generate a {difficulty} multiple-choice question about space exploration, Mars, or astronomy.
-    The response should be in this exact JSON format:
-    {{
-        "question": "The question text here",
-        "options": ["Option A", "Option B", "Option C", "Option D"],
-        "correct_index": 0,
-        "explanation": "Detailed explanation why this is correct",
-        "fun_fact": "An interesting related fact about this topic"
-    }}
-    Make sure the difficulty matches level {level}."""
+    try:
+        difficulty = "basic" if level <= 3 else "intermediate" if level <= 6 else "advanced"
+        
+        prompt = f"""Generate a {difficulty} multiple-choice question about space exploration, Mars, or astronomy.
+        The response should be in this exact JSON format:
+        {{
+            "question": "The question text here",
+            "options": ["Option A", "Option B", "Option C", "Option D"],
+            "correct_index": 0,
+            "explanation": "Detailed explanation why this is correct"
+        }}
+        Make sure the difficulty matches level {level}."""
 
-    response = client.chat.completions.create(
-        model="mixtral-8x7b-32768",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.7,
-        max_tokens=500
-    )
-    
-    return json.loads(response.choices[0].message.content)
+        response = client.chat.completions.create(
+            model="mixtral-8x7b-32768",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7,
+            max_tokens=500
+        )
+        
+        return json.loads(response.choices[0].message.content)
+    except Exception as e:
+        st.error(f"Error generating question: {str(e)}")
+        return None
 
 def celebrate_correct_answer():
     st.balloons()
@@ -144,7 +143,7 @@ def main():
     
     init_session_state()
     
-    # Welcome screen and username input
+    # Welcome screen
     if not st.session_state.username:
         st.title("🌌 Welcome to Space Explorer Quiz!")
         st.markdown("""
@@ -156,13 +155,12 @@ def main():
             st.session_state.username = username
             st.balloons()
             st.success(f"Welcome aboard, Space Explorer {username}! 🚀")
-            time.sleep(1)
             st.rerun()
     
     else:
         st.title(f"🚀 Space Explorer Quiz - Navigator {st.session_state.username}")
         
-        # Sidebar with stats
+        # Sidebar stats
         with st.sidebar:
             st.markdown("### 📊 Mission Stats")
             st.markdown(f"🏆 Highest Level: {st.session_state.highest_level}")
@@ -188,7 +186,12 @@ def main():
         else:
             if not st.session_state.current_question:
                 with st.spinner("Preparing next challenge..."):
-                    st.session_state.current_question = generate_question(st.session_state.level)
+                    question_data = generate_question(st.session_state.level)
+                    if question_data:
+                        st.session_state.current_question = question_data
+                    else:
+                        st.error("Failed to generate question. Please try again.")
+                        st.stop()
             
             st.markdown(f"""
             <div class='question-box'>
@@ -212,13 +215,10 @@ def main():
                         st.session_state.score += (10 - st.session_state.wrong_attempts)
                         st.session_state.streak += 1
                         st.session_state.total_questions += 1
-                        st.session_state.current_question = None
+                        st.session_state.wrong_attempts = 0
                         st.session_state.highest_level = max(st.session_state.highest_level, st.session_state.level)
                         check_achievements()
-                        
-                        # Show fun fact
-                        st.info(f"🌟 Fun Fact: {st.session_state.current_question['fun_fact']}")
-                        
+                        st.session_state.current_question = None
                         st.rerun()
                     else:
                         st.session_state.wrong_attempts += 1
@@ -230,8 +230,7 @@ def main():
             with col2:
                 if st.button("🔄 Start New Mission", use_container_width=True):
                     for key in ['level', 'current_question', 'wrong_attempts', 'quiz_started', 'score', 'streak']:
-                        if key in st.session_state:
-                            st.session_state[key] = 0
+                        st.session_state[key] = 0 if key != 'current_question' else None
                     st.session_state.level = 1
                     st.rerun()
 
