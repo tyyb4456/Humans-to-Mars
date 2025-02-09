@@ -87,57 +87,58 @@ def chat_interface():
     st.title("Mars Expert AI Chatbot 🚀")
     st.write("Ask me anything about Mars! I'm here to help you learn about the Red Planet.")
     
-    # Add a sidebar with example questions
-    with st.sidebar:
-        st.header("Sample Questions")
-        st.write("Click on any question to try it out:")
-        for question in DEFAULT_QUESTIONS:
-            if st.button(question):
-                st.session_state.messages.append({"role": "user", "content": question})
-                with st.chat_message("user"):
-                    st.markdown(question)
-                
-                with st.chat_message("assistant"):
-                    with st.spinner("Thinking..."):
-                        response = get_groq_response(st.session_state.messages)
-                        st.markdown(response)
-                st.session_state.messages.append({"role": "assistant", "content": response})
-    
     # Initialize chat history
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
-    # Display chat history
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+    # Create two columns - one for chat and one for questions
+    col1, col2 = st.columns([2, 1])
     
-    # Add clear chat button
-    if st.button("Clear Chat"):
-        st.session_state.messages = []
-        st.experimental_rerun()
-    
-    # Chat input
-    if prompt := st.chat_input("Ask a question about Mars..."):
-        # Add user message to chat history
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
+    with col1:
+        # Display chat history
+        chat_container = st.container()
+        with chat_container:
+            for message in st.session_state.messages:
+                with st.chat_message(message["role"]):
+                    st.markdown(message["content"])
         
-        # Generate AI response
-        with st.chat_message("assistant"):
-            with st.spinner("Thinking about Mars..."):
-                response = get_groq_response(st.session_state.messages)
-                st.markdown(response)
-        st.session_state.messages.append({"role": "assistant", "content": response})
+        # Add clear chat button
+        if st.button("Clear Chat"):
+            st.session_state.messages = []
+            st.experimental_rerun()
+        
+        # Chat input
+        if prompt := st.chat_input("Ask a question about Mars..."):
+            # Add user message to chat history
+            st.session_state.messages.append({"role": "user", "content": prompt})
+            with st.chat_message("user"):
+                st.markdown(prompt)
+            
+            # Generate AI response
+            with st.chat_message("assistant"):
+                with st.spinner("Thinking about Mars..."):
+                    response = get_groq_response(st.session_state.messages)
+                    st.markdown(response)
+            st.session_state.messages.append({"role": "assistant", "content": response})
+    
+    with col2:
+        # Example questions section
+        st.markdown("### Try these questions:")
+        for question in DEFAULT_QUESTIONS:
+            if st.button(question, key=f"btn_{question}"):
+                st.session_state.messages.append({"role": "user", "content": question})
+                with chat_container.chat_message("user"):
+                    st.markdown(question)
+                
+                with chat_container.chat_message("assistant"):
+                    with st.spinner("Thinking..."):
+                        response = get_groq_response(st.session_state.messages)
+                        st.markdown(response)
+                st.session_state.messages.append({"role": "assistant", "content": response})
 
 def main():
-#     # Set page config
-#     st.set_page_config(
-#         page_title="Mars Expert Chat",
-#         page_icon="🚀",
-#         layout="wide"
-#     )
+    # Set page config
+
     
     chat_interface()
 
