@@ -37,12 +37,10 @@ An interactive web application built with Streamlit that provides comprehensive 
 ## Installation
 
 1. Clone the repository:
-bash
-git clone https://github.com/yourusername/mars-explorer.git
+git clone https://github.com/Humam-hub/Mars.git/
 cd mars-explorer
 
 2. Install required packages:
-bash
 pip install -r requirements.txt
 
 3. Set up environment variables:
