@@ -78,32 +78,32 @@
 <table>
 <tr>
     <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Muhammad Humam"/><br>
+        <img src="https://avatars.githubusercontent.com/u/147333130?v=4" width="100px;" style="border-radius: 50%;" alt="Muhammad Humam"/><br>
         <b>Muhammad Ibrahim Qasmi</b><br>
         <sub>Mission Commander</sub><br>
-        <a href="https://github.com/Humam-hub"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
-        <a href="https://linkedin.com/in/muhammad-humam-tahir-470267178/"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+        <a href="https://github.com/muhammadibrahim313"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://www.linkedin.com/in/muhammad-ibrahim-qasmi-9876a1297/"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Tayyab Sajjad"/><br>
+        <img src="https://avatars.githubusercontent.com/u/124726671?v=4" width="100px;" style="border-radius: 50%;" alt="Tayyab Sajjad"/><br>
         <b>Tayyab Sajjad</b><br>
-        <sub>AI Systems Engineer</sub><br>
-        <a href="https://github.com/sarahchen"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
-        <a href="https://linkedin.com/in/sarahchen"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+        <sub>AI Engineer</sub><br>
+        <a href="https://github.com/devtayyabsajjad"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://linkedin.com/in/devtayyabsajjad"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
         <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Zeeshan Younus"/><br>
         <b>Zeeshan Younus</b><br>
         <sub>Interface Architect</sub><br>
-        <a href="https://github.com/davidr"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
-        <a href="https://linkedin.com/in/davidr"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+        <a href="https://github.com/Zeeshan5932"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://www.linkedin.com/in/zeeshan-younas-919a09253/"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Ubaid Ullah"/><br>
+        <img src="https://avatars.githubusercontent.com/u/191659569?v=4" width="100px;" style="border-radius: 50%;" alt="Ubaid Ullah"/><br>
         <b>Ubaid Ullah</b><br>
         <sub>Systems Engineer</sub><br>
-        <a href="https://github.com/emmapatel"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
-        <a href="https://linkedin.com/in/emmapatel"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+        <a href="https://github.com/ubaidullah2002"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://www.linkedin.com/in/ubaid-ullah24/"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
         <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Tayyab Hussain"/><br>
@@ -113,11 +113,11 @@
         <a href="https://linkedin.com/in/liamj"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Humama Tahir"/><br>
+        <img src="https://avatars.githubusercontent.com/u/70429018?v=4" width="100px;" style="border-radius: 50%;" alt="Humama Tahir"/><br>
         <b>Humama Tahir</b><br>
         <sub>Operations Specialist</sub><br>
-        <a href="https://github.com/sophial"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
-        <a href="https://linkedin.com/in/sophial"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
+        <a href="https://github.com/Humam-hub"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://www.linkedin.com/in/muhammad-humam-tahir-470267178/"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
 </tr>
 </table>
