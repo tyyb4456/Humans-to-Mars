@@ -92,7 +92,7 @@
         <a href="https://linkedin.com/in/devtayyabsajjad"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/73097560?v=4" width="100px;" style="border-radius: 50%;" alt="Zeeshan Younus"/><br>
+        <img src="https://media.licdn.com/dms/image/v2/D4D35AQG8NudoJ13Jug/profile-framedphoto-shrink_100_100/B4DZUPpndjGkAo-/0/1739724322990?e=1740423600&v=beta&t=e9hByQbApGt8PihxzaJlEEEG_GXvED8GZkvDhGvDHEg" width="100px;" style="border-radius: 50%;" alt="Zeeshan Younus"/><br>
         <b>Zeeshan Younus</b><br>
         <sub>Interface Architect</sub><br>
         <a href="https://github.com/Zeeshan5932"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
