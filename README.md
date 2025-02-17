@@ -109,7 +109,7 @@
         <img src="https://media.licdn.com/dms/image/v2/D4D03AQF9L9W34MZE8w/profile-displayphoto-shrink_200_200/B4DZPLuGtoG0AY-/0/1734289683949?e=1744848000&v=beta&t=weE60c_rN4vCRdZpvCiLeuxX7pN6M-tm0KLmINyWhqE" width="100px;" style="border-radius: 50%;" alt="Tayyab Hussain"/><br>
         <b>Tayyab Hussain</b><br>
         <sub>Data Analytics Lead</sub><br>
-        <a href="https://github.com/liamj"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
+        <a href="https://gub.com/li======================amj"><img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="16px"></a>
         <a href="https://www.linkedin.com/in/tayyab-hussain-72b972267/"><img src="https://cdn-icons-png.flaticon.com/24/61/61109.png" width="16px"></a>
     </td>
     <td align="center">
