@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🌠 Humans to Mars 
-
+   
 <img src="mars.gif" 
      width="100%" 
      alt="Mars Animation Banner"/>
